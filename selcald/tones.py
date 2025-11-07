@@ -379,7 +379,6 @@ class DebugTonesFormat(Enum):
 
 # tone synthesis
 def note(freq, cycles, amp=32767.0, rate=44100):
-    print(f"DEBUG: note() - freq: [{freq}], cycles: [{cycles}], amp: [{amp}], rate: [{rate}]")
     len = cycles * (1.0/rate)
     t = np.linspace(0, len, int(len * rate))
     if freq == 0.0:
